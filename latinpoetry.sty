@@ -1,0 +1,47 @@
+\newcommand{\trans}[1]{
+	\begin{normalsize}
+		\begin{sc}
+			{{#1}}
+		\end{sc}
+	\end{normalsize}
+}
+
+\newcommand{\latblock}[2]{
+	\begin{verse}
+		\begin{metrica}
+		{#1}\\
+		\end{metrica}
+		\trans{{#2}}\\
+	\end{verse}
+}
+
+\newcommand{\commentary}[2]{
+	\vskip5mm
+	\normalsize
+
+                    % (moves boxt left/right,moves box up/down vertically)()
+	\begin{picture}   
+		(50,{#1})       % Creates the canvas space in which the frame will live
+							      %
+ 							      % Custom  offsets for positioning the box
+	  (-35,0)         % First arg is the X offset, negatives move inward; 
+	                  % positives, outword
+	                  % relative to the position within the \picture inveronment
+                    
+		\put            
+		(00,10)         % Positioning of the box
+		{
+			\framebox
+			(400,{#1})[t] % Width of the box, height of the box
+			{
+			  \begin{minipage}[t]{380pt}
+					\vskip 5pt
+			  	{#2}
+					\vskip 5pt
+			  \end{minipage}
+				
+			}
+		}
+	\end{picture}
+	\vskip 1mm
+}
