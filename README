@@ -1,0 +1,24 @@
+Introduction:
+
+This is a simple set of LateX commands which help make Latin analysis prettier.
+
+Example:
+
+\latblock
+  {
+   \={\macron A}rm\-a v\-ir\=umqu\-e c\-an{\={\macron o}}, $||$ 
+   Tr\={o}j\={\ae} qu\={\macron{\i}} pr\={\macron{\i}}m\-us \-ab
+   \={o}r\={\macron{\i}}s
+  } 
+  {I sing of arms and the man, who came from the borders of Troy }
+	
+
+Dependencies:
+
+Documents will need the following packages:
+
+  \usepackage{setspace}
+  \usepackage{ulem}
+  \usepackage{framed}
+  \usepackage[en]{metre}
+
