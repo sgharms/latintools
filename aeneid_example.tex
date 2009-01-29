@@ -1,1 +1,176 @@
-TODO
+%
+%  Example Notes
+%
+%  Created by Steven Harms on 2009-01-26.
+%  Copyright (c) 2009 Steven G. Harms. All rights reserved.
+%
+\documentclass[]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage{setspace}
+\usepackage{ulem}
+\usepackage{framed}
+\usepackage[en]{metre}
+\usepackage{latinpoetry}
+
+\begin{document}
+
+\section*{Virgil's {\AE}neid:  Lines 1-11} % (fold)
+
+\Elevatio{2}
+
+\latline
+  {\={\macron A}rm\-a v\-ir\=umqu\-e c\-an{\={\macron o}}, $||$ Tr\={o}j\={\ae} qu\={\macron{\i}} pr\={\macron{\i}}m\-us \-ab \={o}r\={\macron{\i}}s}
+	{I sing of arms and the man, who came from Troy to}
+  {180}
+	{I sing of arms and the man, an exile, who came from the borders of Troy,}
+	{
+	\begin{enumerate}
+			\item The first word is important, the use of ``arma'' indicates that Vergil is singing about war.
+			\item Vergil's first word and last words of sentences and clauses are carefully chosen.
+			\item Supply ``est'':  ``{\AE}neas primus est; profugus est''
+			\item There are \textbf{three} types of adjectives
+			\begin{enumerate}
+				\item attributive: simple modification ``vir bonus''
+				\item substantive:  ``bonus'' i.e. ``the good man''
+				\item predicate:  ``vir bonus est''
+			\end{enumerate}
+		 \end{enumerate}	
+	}
+
+\latline
+		{{\macron I}t\-{a}l\-i\={a}m f\={\macron a}t\={\macron o} pr\-of\-ug\={\macron u}s $||$ L\={\macron a}v\={\macron{\i}}n\-aqu\-e v\={\macron e}n\={\macron{\i}}t}
+		{Italy and the Lavinian shores under an exile's fate.}
+		{80}{to Italy and the Lavinian }{}
+
+\latline
+{l\={\macron{\i}}t\-or\-a --- m\=ultu\sout{m }\={i}ll\={{\sout{e }}\=e}t $||$ t\=err\={\macron{\i}}s j\=act\={\macron a}t\-us \-et \=alt\={\macron o}}
+{--- after he was buffeted both by many lands and also}
+{110}
+{shores, --- that man, much buffeted both on land and sea, as well as by}
+{}
+
+\newpage
+\latline
+{v\={\i} s\-up\-er\=um, s\={\ae}v\={\ae} $||$ m\-em\-or\=em J\={u}n\={o}n\-is \-ob \={\i}r\=am,}
+{the powers of the Gods, brought to rage by the cruel memory of Juno}
+{110}
+{the powers of the gods, on account of the unforgetting memory of wrathful Juno,}
+{
+	\begin{enumerate}
+		\item note the meter:  ``we-superroom''
+		\item Note the interlocked word order:  as written: ``saevae memorem J\={u}n\={o}nis ob {\={\i}}ram'',
+		but has the force of  ``saevae {\={\i}}ram J\={u}n\={o}nis ob \={\i}ram memorem''
+	\end{enumerate}
+}
+
+\latline
+{m\=ult\-a qu\-oqu\={\sout{\=e\= }\=e}t b\=ell\={o} $||$ p\=ass\=us, d\=um c\=ond\-er\-et \=urb\=em}
+{endured many things and war, thence would found the city}
+{120}
+{he also endured many things in war, that he might found the city}
+{
+\begin{enumerate}
+	\item ablative of respect ``bell{\macron o}''
+	\item due to the subjunctive, we say ``might.''  This is a \textbf{dum} clause
+	\item While we made ``jactatus est'' passive, ``passus'' remains active in sense as it is a \textbf{deponent} verb
+\end{enumerate}
+}
+
+\latline
+{\={\macron{\i}}nf\=err\=etqu\-e d\-e\={o}s L\-at\-i\={o} $||$ --- g\-en\-us \=und\-e L\-at\={\i}n\=um}
+{and carry the gods to Latinum --- and sire the Latin race,}
+{110}
+{and might carry the gods to Latium --- from which place (whence) [are] the}
+{
+\begin{enumerate}
+	\item Lati{\macron o} is a dative of direction, this is commonly used with compound verbs
+	\item ``unde'' is a relative pronoun
+\end{enumerate}
+}
+
+\newpage
+
+\latline
+{\=Alb\={a}n\={\macron {\i}}qu\-e p\-atr\={e}s $||$ \-atqu\sout{e }\=alt\={\ae} m\={oe}n\-i\-a R\={\macron o}m\={\ae}.}
+{the Alban forefathers and also the high walls of Rome.}
+{110}
+{Alban fathers and also the walls of mighty Rome.}
+{
+\begin{enumerate}
+	\item Good demonstration of long or short by position: ``patr{\macron
+e}s''. You have `a' followed by `tr', thus seeming to indicate long by
+position. But since `r' may or may not count, this is not definite. It, in
+fact, remains short.
+\end{enumerate}
+}
+
+\latline
+{M\={\macron u}s\-a, m\-ih\={\i} c\={au}s\={a}s m\-em\-or\={a}, $||$ qu\={o} n\={u}m\-in\-e l\={\ae}s\={o}}
+{Muse, recount to me the causes by which, divinity having been offended or  }
+{110}
+{Muse, recall to me the causes by which }
+{
+\begin{enumerate}
+	\item n\={u}mine l{\ae}s\=o: ablative absolute
+\end{enumerate}
+}
+
+\latline
+{quidve dol\={\macron e}ns r\={\macron e}g\={\macron{\i}}na deum tot volvere c\={\macron a}s\={\macron u}s}
+{or the vexation at what would impelled the queen of the gods to force}
+{110}
+{or vexation at what impelled the queen of the gods to spin out such harsh fates and }
+{
+\begin{enumerate}
+	\item Indirect question set up by ``quid''
+	\item IQ necessitates subjunctive, thus ``impulerit''
+\end{enumerate}
+}
+
+\newpage
+
+\latline
+{\={\macron{\i}}ns\=ign\=em p\-i\-et\={\macron a}t\-e v\-ir\=um, $||$ t\-ot \-ad\={\macron{\i}}r\-e l\-ab\={\macron o}r\={\macron e}s }
+{so many difficult labors}	
+{110}
+{and bring that man, outstanding in piety, to face so many harsh labors.}
+{}
+
+\latline
+{\=imp\-ul\-er\=it. $||$ T\=ant\={\ae}n\sout{e }\=anim\={\i}s c\={\ae}l\=est\-ib\-us \={\macron{\i}}r{\ae}?}
+{Are the minds of the heavens so wrathful?}
+{110}
+{}
+{
+\begin{enumerate}
+	\item Note ``tantae'' is a predicate adjective
+\end{enumerate}
+}
+
+\end{document}
+
