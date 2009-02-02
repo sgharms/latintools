@@ -1,0 +1,7 @@
+This is a project for tools that help you write Latin more easily.
+
+Tools fall into these varieties:
+
+1.  Tools that change LaTeX characters into Unicode characters with macrons
+2.  Textmate modes that allow you to use ^a to generate LaTeX codes like \={a}
+3.  LaTeX styles that help with the annotation of verse
