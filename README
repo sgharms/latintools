@@ -2,6 +2,20 @@ This is a project for tools that help you write Latin more easily.
 
 Tools fall into these varieties:
 
-1.  Tools that change LaTeX characters into Unicode characters with macrons
-2.  Textmate modes that allow you to use ^a to generate LaTeX codes like \={a}
-3.  LaTeX styles that help with the annotation of verse
+  + LaTeX_tools
+    -  LaTeX styles that help with the annotation of verse
+  + Textmate_tools
+     - Latin Student.tmbundle
+       A Textmate bundle that is used to speed up typing of Latin text.
+
+       1.  In a LaTeX file, entering control+[aeiou] or [AEIOU] will result in
+	   a LaTeX macron glyph (e.g. \={a}).  This allows you to touch-type
+	   text in without fear
+       2.  Contains the "Dactylize" method which takes glyphs with macrons, and
+	   then, above them, suspends another long mark automatically.  When
+	   doing scansion, this will allow your long vowels to have a macron AND
+	   for you to have another long mark 2 units above so that, when
+           combined with short marks, you can have a full, beautifully typeset 
+	   scansion line.
+  + CLI
+    - Tools that change LaTeX characters into Unicode characters with macrons
