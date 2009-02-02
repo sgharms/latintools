@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToBeginningOfLine:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@[</string>
+	<key>name</key>
+	<string>Latin Move To Start Of Line</string>
+	<key>scope</key>
+	<string>text.tex</string>
+	<key>uuid</key>
+	<string>BA51A62B-FE9E-4753-B54A-C84C3A273AB1</string>
+</dict>
+</plist>

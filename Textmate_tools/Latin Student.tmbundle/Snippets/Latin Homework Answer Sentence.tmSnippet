@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;p class="sent_answer"&gt;$1&lt;/p&gt;$2</string>
+	<key>name</key>
+	<string>Latin Homework Answer Sentence</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>pans</string>
+	<key>uuid</key>
+	<string>FBE97330-A6CF-4AC8-8CD3-9D55C08A848D</string>
+</dict>
+</plist>

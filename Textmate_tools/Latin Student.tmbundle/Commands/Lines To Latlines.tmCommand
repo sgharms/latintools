@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+counter = 0 
+
+STDIN.read.each do |content|
+  printf("\\latline\n  {%s}\n  { Translation }\n  {110}\n  { CorrectedTranslation }\n  { Notes }\n\n\n", content.chomp.gsub(/\\\=\{/,'\={\macron '))
+  counter += 1
+  print "\\newpage\n\n" if ( counter == 3)
+  counter = 0 if ( counter == 3 )
+end
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Lines To Latlines</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>6473A22F-384C-410F-85EB-67106E3AA535</string>
+</dict>
+</plist>

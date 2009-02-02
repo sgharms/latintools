@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\={a}</string>
+	<key>keyEquivalent</key>
+	<string>^a</string>
+	<key>name</key>
+	<string>LC a-macron (LaTeX)</string>
+	<key>scope</key>
+	<string>text.tex.latex</string>
+	<key>tabTrigger</key>
+	<string>
+</string>
+	<key>uuid</key>
+	<string>912E9565-8ECF-43EC-8CF7-1A41F04CEF3D</string>
+</dict>
+</plist>
