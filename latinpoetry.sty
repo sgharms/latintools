@@ -65,3 +65,17 @@
 		#5
 	}
 }{{}}
+
+\newcommand{\outlinestyle}[]{
+  \renewcommand{\labelenumi}{\Roman{enumi}.}
+  \renewcommand{\labelenumii}{\Alph{enumii}.}
+  \renewcommand{\labelenumiii}{\arabic{enumiii}.}
+  \renewcommand{\labelenumiv}{\alph{enumiv}.}
+}
+
+\newcommand{\enumstyle}[]{
+  \renewcommand{\labelenumi}{\arabic{enumi}.}
+  \renewcommand{\labelenumii}{\Alph{enumii}.}
+  \renewcommand{\labelenumiii}{\roman{enumiii}.}
+  \renewcommand{\labelenumiv}{\alph{enumiv}.}
+}
