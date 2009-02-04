@@ -10,7 +10,7 @@
 counter = 0 
 
 STDIN.read.each do |content|
-  printf("\\latline\n  {%s}\n  { Translation }\n  {110}\n  { CorrectedTranslation }\n  { Notes }\n\n\n", content.chomp.gsub(/\\\=\{/,'\={\macron '))
+  printf("\\latline\n  {%s}\n  { Translation }\n  {110}\n  { CorrectedTranslation }\n  { Notes }\n\n\n", content.chomp.gsub(/\\\=\{\\+/,'\={\macron '))
   counter += 1
   print "\\newpage\n\n" if ( counter == 3)
   counter = 0 if ( counter == 3 )
