@@ -1,0 +1,81 @@
+\newcommand{\trans}[1]{
+	\begin{normalsize}
+		\begin{sc}
+			{{#1}}
+		\end{sc}
+	\end{normalsize}
+}
+
+\newcommand{\transcorr}[1]{
+  \vskip 5mm
+  \hskip 10pt
+  % We make this guy small because we're going to fit it in a framed box
+  \small
+	
+	\rule{130mm}{.1mm}\\
+	{\it{#1}}\\
+	\rule{130mm}{.1mm}
+}
+
+\newcommand{\latblock}[2]{
+	\Large
+	\begin{verse}
+		\begin{metrica}
+		{#1}\\
+		\end{metrica}
+		\trans{{#2}}\\
+	\end{verse}
+	\normalsize
+}
+
+\newcommand{\commentary}[2]{
+	\vskip5mm
+	\normalsize
+                    
+	\begin{picture}   % (moves boxt left/right,moves box up/down vertically)()
+		(50,{#1})       % Creates the canvas space in which the frame will live
+							      %
+ 							      % Custom  offsets for positioning the box
+	  (-35,0)         % First arg is the X offset, negatives move inward; 
+	                  % positives, outword
+	                  % relative to the position within the \picture inveronment
+                    
+		\put            
+		(00,10)         % Positioning of the box
+		{
+			\framebox
+			(400,{#1})[t] % Width of the box, height of the box
+			{
+			  \begin{minipage}[t]{380pt}
+					\vskip 5pt
+			  	{#2}
+					\vskip 5pt
+			  \end{minipage}
+				
+			}
+		}
+	\end{picture}
+	\vskip 1mm
+}
+
+\newcommand{\latline}[5]{
+	\latblock{#1}{#2}
+	\commentary{#3}{
+		\transcorr{#4}
+		#5
+	}
+}{{}}
+
+\newcommand{\outlinestyle}[]{
+  \renewcommand{\labelenumi}{\Roman{enumi}.}
+  \renewcommand{\labelenumii}{\Alph{enumii}.}
+  \renewcommand{\labelenumiii}{\arabic{enumiii}.}
+  \renewcommand{\labelenumiv}{\alph{enumiv}.}
+}
+
+\newcommand{\enumstyle}[]{
+  \renewcommand{\labelenumi}{\arabic{enumi}.}
+  \renewcommand{\labelenumii}{\Alph{enumii}.}
+  \renewcommand{\labelenumiii}{\roman{enumiii}.}
+  \renewcommand{\labelenumiv}{\alph{enumiv}.}
+}

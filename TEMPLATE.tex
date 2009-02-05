@@ -1,0 +1,56 @@
+%
+%  $id$
+%
+%  Created by Steven Harms on 2009-01-26.
+%  Copyright (c) 2009 Steven G. Harms. All rights reserved.
+%
+\documentclass[]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage{setspace}
+\usepackage{ulem}
+\usepackage{framed}
+\usepackage[en]{metre}
+\usepackage{latinpoetry}
+
+\begin{document}
+
+\section*{Virgil's {\AE}neid:  [TBD]} % (fold)
+
+\Elevatio{2}
+
+\latline
+  {Latin Text Here}
+  {Translation}
+  {110} % 110 is a standard box size
+  {Corrected translation}
+  {
+  }
+
+
+\end{document}
+

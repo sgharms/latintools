@@ -4,6 +4,23 @@ Tools fall into these varieties:
 
   + LaTeX_tools
     -  LaTeX styles that help with the annotation of verse
+
+    \latblock
+    {
+     \={\macron A}rm\-a v\-ir\=umqu\-e c\-an{\={\macron o}}, $||$ 
+     Tr\={o}j\={\ae} qu\={\macron{\i}} pr\={\macron{\i}}m\-us \-ab
+     \={o}r\={\macron{\i}}s
+    } 
+    {I sing of arms and the man, who came from the borders of Troy }
+    Dependencies:
+
+    Documents will need the following packages:
+
+      \usepackage{setspace}
+      \usepackage{ulem}
+      \usepackage{framed}
+      \usepackage[en]{metre}
+
   + Textmate_tools
      - Latin Student.tmbundle
        A Textmate bundle that is used to speed up typing of Latin text.
@@ -19,3 +36,4 @@ Tools fall into these varieties:
 	   scansion line.
   + Shell_tools
     - Tools that change LaTeX characters into Unicode characters with macrons
+
