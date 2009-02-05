@@ -17,5 +17,5 @@ Tools fall into these varieties:
 	   for you to have another long mark 2 units above so that, when
            combined with short marks, you can have a full, beautifully typeset 
 	   scansion line.
-  + CLI
+  + Shell_tools
     - Tools that change LaTeX characters into Unicode characters with macrons
