@@ -41,5 +41,6 @@ Tools fall into these varieties:
            combined with short marks, you can have a full, beautifully typeset 
 	   scansion line.
   + Shell_tools
-    - Tools that change LaTeX characters into Unicode characters with macrons
+    - latex2latin a tools that changes LaTeX macron characters into 
+      Unicode / UTF8 / HTML entities characters with macrons
 
