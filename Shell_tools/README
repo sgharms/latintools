@@ -1,0 +1,7 @@
+latex2latin is a tool which will take an entered string of LaTeX formatted
+entries and returns those entries in one of three forms:  macron-entries (
+displayable if your terminal supports them ), HTML entities, or utf8 glyphs.
+
+The package has a dependency on MacronConversions.rb
+
+latex2latin has embedded rdoc.

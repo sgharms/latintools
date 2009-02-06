@@ -1,0 +1,93 @@
+#!/usr/bin/env ruby
+#
+# == Synopsis
+#
+# latex2latin: Takes a string, in LaTeX-macron formatting and returns the string, with 
+# macrons turned into some other entity ( high-ASCII, HTML entity, UTF-8 bytecodes).
+#
+# == Usage
+#
+# latex2latin [CONVERSION FORMAT] content
+#
+# Content is a macron-possessing string, latex2latin will convert it into the selected macron-entity
+# format: a multibyte character ( -m ), a UTF-8 enabled string ( -u ), or an
+# HTML entity ( -h ).
+#
+#   * -?, --help:
+#    show help
+#
+#   * --macron m:
+#    Prints the macronized characters as associated high-ASCII character.  If you have a good terminal 
+#    emulator like urxvt, you'll see a letter with a bar over it
+#
+#   * --html, h:
+#    Prints the macronized character as associated HTML entity in &#(number) format
+#
+#   * --utf8, u:
+#    Prints the macronized character as associated HTML entity in &#(number) format
+# 
+#   * --help, -?:
+#    this documentation
+#
+# == Examples
+#
+# $./latex2latin -m '\={a}\={e}\={\i}\={A}\={I}'
+# āēīĀĪ
+# $./latex2latin -m '\={a}\={e}\={\i}\={A}\={I}'
+# āēīĀĪ
+# $./latex2latin -h '\={a}\={e}\={\i}\={A}\={I}'
+# &#x101;&#x113;&#x12b;&#x100;
+# $./latex2latin -u '\={a}\={e}\={\i}\={A}\={I}'
+# \xc4\x81\xc4\x93\xc4\xab\xc4\x80
+# 
+#
+#
+# == Dependencies
+#
+# Requires the MacronConversions module
+#
+# == Author
+#
+# Steven G. Harms, http://www.stevengharms.com
+
+require 'MacronConversions'
+require 'getoptlong'
+require 'rdoc/usage'
+
+opts = GetoptLong.new(
+      [ '--macron', '-m', GetoptLong::NO_ARGUMENT ],
+      [ '--html',   '-h', GetoptLong::NO_ARGUMENT ],
+      [ '--utf8',   '-u', GetoptLong::NO_ARGUMENT ],
+      [ '--content', '-c', GetoptLong::REQUIRED_ARGUMENT],
+      [ '--help',   '-?', GetoptLong::OPTIONAL_ARGUMENT]
+    )
+
+$mode='html'
+
+
+opts.each do |opt,value| 
+  case opt
+  when '--macron'
+    $mode = 'mc'
+  when '--html'
+    $mode = 'html'
+  when '--utf8'
+    $mode = 'utf8'
+  when '--content'
+    $content = value
+  when '--help'
+    RDoc::usage
+  end
+end
+
+
+if $content.nil? 
+  $content = ARGV.shift
+end
+
+if $content.nil?
+  puts "Did not receive content to operate on."
+  exit 1
+end
+
+puts MacronConversions::MacronConverter.new($content, $mode)
