@@ -20,10 +20,10 @@
 \newcommand{\latblock}[2]{
 	\Large
 	\begin{verse}
-		\begin{metrica}
-		{#1}\\
-		\end{metrica}
-		\trans{{#2}}\\
+	  \begin{metrica}
+	  {#1}\\
+	  \end{metrica}
+	  \trans{{#2}}\\
 	\end{verse}
 	\normalsize
 }
@@ -66,14 +66,14 @@
 	}
 }{{}}
 
-\newcommand{\outlinestyle}[]{
+\newcommand{\outlinestyle}[0]{
   \renewcommand{\labelenumi}{\Roman{enumi}.}
   \renewcommand{\labelenumii}{\Alph{enumii}.}
   \renewcommand{\labelenumiii}{\arabic{enumiii}.}
   \renewcommand{\labelenumiv}{\alph{enumiv}.}
 }
 
-\newcommand{\enumstyle}[]{
+\newcommand{\enumstyle}[0]{
   \renewcommand{\labelenumi}{\arabic{enumi}.}
   \renewcommand{\labelenumii}{\Alph{enumii}.}
   \renewcommand{\labelenumiii}{\roman{enumiii}.}
