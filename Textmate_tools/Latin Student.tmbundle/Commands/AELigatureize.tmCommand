@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/env ruby
+line=String.new(ENV['TM_CURRENT_WORD'])
+line.gsub!(/ae/, "{\\ae\}")
+line.gsub!(/^(Ae|AE)(.*)/, "{\\AE\}\\2")
+print line.chomp</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^q</string>
+	<key>name</key>
+	<string>AELigatureize</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.tex.latex</string>
+	<key>uuid</key>
+	<string>CDECBD60-25FA-4CE8-BBB4-6EEB3366BCB9</string>
+</dict>
+</plist>
