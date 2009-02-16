@@ -59,11 +59,14 @@
 }
 
 \newcommand{\latline}[5]{
-	\latblock{#1}{#2}
-	\commentary{#3}{
-		\transcorr{#4}
-		#5
-	}
+  \noindent
+  \parbox[b]{6in}{
+    \latblock{#1}{#2}
+      \commentary{#3}{
+      \transcorr{#4}
+       #5
+    }
+  }
 }{{}}
 
 \newcommand{\outlinestyle}[0]{
