@@ -5,24 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/bin/env ruby
-line=String.new(ENV['TM_CURRENT_WORD'])
-line.gsub!(/ae/, "{\\ae\}")
-line.gsub!(/^(Ae|AE)(.*)/, "{\\AE\}\\2")
-print line.chomp</string>
-	<key>fallbackInput</key>
-	<string>word</string>
+	<string># just to remind you of some useful environment variables
+# see Help / Environment Variables for the full list
+echo File: "$TM_FILEPATH"
+echo Word: "$TM_CURRENT_WORD"
+echo Selection: "$TM_SELECTED_TEXT"</string>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>@"</string>
 	<key>name</key>
-	<string>AELigatureize</string>
+	<string>untitled</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
-	<key>scope</key>
-	<string>text.tex.latex</string>
 	<key>uuid</key>
-	<string>CDECBD60-25FA-4CE8-BBB4-6EEB3366BCB9</string>
+	<string>F95CE540-D073-47EE-9F06-02620DD39B49</string>
 </dict>
 </plist>
