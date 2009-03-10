@@ -11,7 +11,7 @@ counter = 0
 
 STDIN.read.each do |content|
   printf("\\latline\n  {%s}\n  { Translation }\n  {110}\n  { CorrectedTranslation }\n  { Notes }\n\n\n", 
-    content.chomp.gsub(/\\\=\{(\\*.)\}/,"\\\={\\macron {\\1}}"))
+    content.chomp.gsub(/ae/, "{\\ae\}").gsub(/^(Ae|AE)(.*)/, "{\\AE\}\\2").gsub(/\\\=\{(\\*.)\}/,"\\\={\\macron {\\1}}"))
 end
 </string>
 	<key>input</key>
