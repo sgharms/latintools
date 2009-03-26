@@ -16,7 +16,7 @@ module MacronConversions
     "\\={u}"   =&gt; "ū",
     "\\={A}"   =&gt; "Ā",
     "\\={E}"   =&gt; "Ē",
-    "\\={\\I}" =&gt; "Ī",
+    "\\={I}" =&gt; "Ī",
     "\\={O}"   =&gt; "Ō",
     "\\={U}"   =&gt; "Ū",
   }
@@ -29,7 +29,7 @@ module MacronConversions
     "\\={u}"   =&gt; "\\xc5\\xab",
     "\\={A}"   =&gt; "\\xc4\\x80",
     "\\={E}"   =&gt; "\\xc4\\x92",
-    "\\={\\I}" =&gt; "\\xc4\\xaa",
+    "\\={I}" =&gt; "\\xc4\\xaa",
     "\\={O}"   =&gt; "\\xc5\\x8c",
     "\\={U}"   =&gt; "\\xc5\\xaa",
   }
@@ -42,7 +42,7 @@ module MacronConversions
     "\\={u}"   =&gt; "&amp;#x16b;",
     "\\={A}"   =&gt; "&amp;#x100;",
     "\\={E}"   =&gt; "&amp;#x112;",
-    "\\={\\I}" =&gt; "&amp;#x12a;",
+    "\\={I}" =&gt; "&amp;#x12a;",
     "\\={O}"   =&gt; "&amp;#x14c;",
     "\\={U}"   =&gt; "&amp;#x16a;",
   }
@@ -55,7 +55,7 @@ module MacronConversions
     
     def processString(s)      
       firstSlash = s =~ /(\\=.*?\})/
-      return "" if $1.nil?
+      return s if $1.nil?
       
       testChar = $1
        
