@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+@start = true
+@count=0
+
+STDIN.read.split(/\s{2}/).each do 
+   |x| 
+   if @start
+     @start = false
+     @count = x.gsub(/[^\d]/,"").to_i
+   else
+     printf("&lt;p class=\"sent_given\"&gt;%d.  %s&lt;/p&gt;\n",@count,x) 
+     @count = @count+1
+   end
+end
+
+
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Linify As Given Sentences (HTML)</string>
+	<key>output</key>
+	<string>afterSelectedText</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>uuid</key>
+	<string>28624DBD-C356-4229-8E12-6C41D5D796CC</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\macron </string>
+	<key>name</key>
+	<string>Metrica macron</string>
+	<key>scope</key>
+	<string>text.tex.latex</string>
+	<key>tabTrigger</key>
+	<string>\m</string>
+	<key>uuid</key>
+	<string>BD7CFABA-F0E7-4073-A7FC-A3A6B29FC409</string>
+</dict>
+</plist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+@start = true
+@count=0
+
+STDIN.read.split(/;\s+/).each do 
+   |x| 
+   if @start
+     @start = false
+     @count = x.gsub(/[^\d]+/,"").to_i
+     x=x.gsub(/^\d+.*\s+/,"")
+     printf("%d. &amp; %s &amp; \\\\\n",@count,x)
+     puts "\\hline" 
+     @count = @count+1
+   else
+	puts "\\hline"
+     x.chomp!
+     printf("%d. &amp; %s &amp; \\\\\n",@count,x) 
+     @count = @count+1
+   end
+end
+
+
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^;</string>
+	<key>name</key>
+	<string>Linify Items As Table Rows (; delimited)</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.tex.latex</string>
+	<key>uuid</key>
+	<string>6939FC50-B2E0-4A2A-BF9F-EDC0F8E33523</string>
+</dict>
+</plist>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>ō</string>
+	<key>keyEquivalent</key>
+	<string>^o</string>
+	<key>name</key>
+	<string> LC-o-macron (HTML)</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>o-</string>
+	<key>uuid</key>
+	<string>82FD1846-8DEE-4BFE-BCFB-59AC47D063D3</string>
+</dict>
+</plist>

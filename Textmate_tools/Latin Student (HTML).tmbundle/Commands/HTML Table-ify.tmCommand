@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+@table = Array.new
+@table_attr = String.new
+@css_attr= String.new
+@row_width=0
+
+def validate_table(t)
+  @row_width = t[0].count("|")-1
+  pipe_count = @row_width + 1
+  t.each { |l|  exit!(1) if l.count("|") != pipe_count}
+end
+
+def clean_meta_lines(r)
+  r.each  do
+      |a|
+      a.chomp!
+      a.gsub!(/\|.*\&gt;/,"") 
+      a.gsub!(/\|/,"")
+      a.gsub!(/^\s+/,"")
+    end
+  
+end
+
+def create_table_hdrs(line)
+  str = "  &lt;tr&gt;\n"
+  line.gsub(/(^\||\|$)/,"").split(/\|/).each do |x|
+    x.chomp!
+    str += '    &lt;th&gt;' + x + "&lt;/th&gt;\n"
+  end
+  str += "  &lt;/tr&gt;"
+end
+
+def formulate_table_line(l)
+  str = "  &lt;tr&gt;\n"
+  l.gsub(/(^\||\|$)/,"").split(/\|/).each do |x|
+    x.chomp!
+    x.gsub!(/(^\s+|\s+$)/,"")
+    str += '    &lt;td&gt;' + x + "&lt;/td&gt;\n"
+  end
+  str += "  &lt;/tr&gt;\n"  
+ str
+end
+
+while ( line = gets )
+  @table.push line if (line =~ /^|.*|$/ &amp;&amp; line !~ /^\|(CSS|ATTR)\&gt;/)
+  @table_attr = line.chomp if line =~ /ATTR\&gt;/
+  @css_attr = line.chomp if line =~ /CSS\&gt;/
+end
+
+puts @table_attr
+@css_attr = "style=\"" + @css_attr + "\"" if @css_attr
+@table_attr= "border=\"0\" cellspacing=\"5\" cellpadding=\"5\"" unless @table_attr.length =~ /\w{3}/
+  
+
+@table_attr.chomp!
+@css_attr.chomp!
+
+validate_table(@table)
+clean_meta_lines([@table_attr, @css_attr])
+@table_hdrs = create_table_hdrs(@table.shift)
+@table.shift if @table[0] =~ /\|\-{3}/
+
+@table_def_line = ""
+
+@table.each do
+  |l|
+  @table_def_line += formulate_table_line(l)
+end
+
+@table_def_line.sub!(/\n$/,"")
+
+table_def = &lt;&lt;END_OF_STRING
+&lt;table #{@table_attr} #{@css_attr}&gt;
+#{@table_hdrs}
+#{@table_def_line}
+&lt;/table&gt;
+END_OF_STRING
+
+puts table_def
+</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@t</string>
+	<key>name</key>
+	<string>HTML Table-ify</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>uuid</key>
+	<string>217007AD-91B1-420B-A0EF-04803E9F934F</string>
+</dict>
+</plist>
